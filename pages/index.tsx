@@ -7,7 +7,7 @@ const Home: NextPage = () => {
         <div>
             <header className="text-gray-100 bg-gradient-to-bl to-black from-gray-800 w-full z-50 py-2">
                 <div className="px-2 md:px-4 lg:px-0 py-2 lg:container mx-auto text-gray-200"><a
-                    href="https://www.linkedin.com/in/dr-sumedh-kanade/" target="_blank" rel="noopener"
+                    href="https://www.linkedin.com/" target="_blank"  rel="noreferrer"
                     className="flex justify-end items-baseline space-x-2 hover:underline"><span
                     className="text-sm md:text-base">Get in touch</span><span className="w-4 h-4"><svg aria-hidden="true"
                                                                                                        focusable="false"
