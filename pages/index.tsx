@@ -102,8 +102,8 @@ const Home: NextPage = () => {
                                             {
                                                 project.srcs.length !== 1?<Carousel slide={false} >
                                                     {
-                                                        project.srcs.map(src=>(
-                                                            <div className={'relative overflow-hidden'} style={{height:'735px'}}>
+                                                        project.srcs.map((src,key)=>(
+                                                            <div key={key} className={'relative overflow-hidden'} style={{height:'735px'}}>
                                                                 <div className={'absolute w-full h-full bg-stone-900 z-10 opacity-20'}></div>
                                                                 <Image src={src}  layout={'fill'}  objectFit={'cover'} objectPosition={'top'}/>
                                                             </div>
