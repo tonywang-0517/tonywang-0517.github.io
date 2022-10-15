@@ -1,6 +1,7 @@
 import type {NextPage} from 'next'
 import Image from 'next/image'
 import {Carousel} from "flowbite-react"
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {
@@ -177,7 +178,7 @@ const Home: NextPage = () => {
                                             techcard.items.map((item,index)=>(
                                                 <div key={index} className={'flex flex-row'}>
                                                     <p className={'basis-6'}>
-                                                        <FontAwesomeIcon icon={item.icon}/>
+                                                        <FontAwesomeIcon icon={item.icon as IconProp}/>
                                                     </p>
                                                     <p className={'basis-auto'}>{item.text}</p>
                                                 </div>
