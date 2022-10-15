@@ -100,16 +100,16 @@ const Home: NextPage = () => {
                                     <div className={`rounded-lg shadow-lg hover:shadow-xl bg-white text-black flex flex-col overflow-hidden ${index%2?'lg:flex-row':'lg:flex-row-reverse'}`} >
                                         <div className='basis-full md:basis-3/5'>
                                             {
-                                                project.srcs.length !== 1?<Carousel slide={false} >
+                                                project.srcs.length !== 1?<Carousel slideInterval={20*1000} >
                                                     {
                                                         project.srcs.map((src,key)=>(
-                                                            <div key={key} className={'relative overflow-hidden'} style={{height:'735px'}}>
+                                                            <div key={key} className={'relative overflow-hidden'} style={{height:'614px'}}>
                                                                 <div className={'absolute w-full h-full bg-stone-900 z-10 opacity-20'}></div>
                                                                 <Image src={src}  layout={'fill'}  objectFit={'cover'} objectPosition={'top'}/>
                                                             </div>
                                                         ))
                                                     }
-                                                </Carousel>:<div className={'relative overflow-hidden'} style={{height:'735px'}}>
+                                                </Carousel>:<div className={'relative overflow-hidden'} style={{height:'614px'}}>
                                                     <div className={'absolute w-full h-full bg-stone-900 z-10 opacity-20'}></div>
                                                     <Image src={project.srcs[0]}  layout={'fill'}  objectFit={'cover'} objectPosition={'top'}/>
                                                 </div>
