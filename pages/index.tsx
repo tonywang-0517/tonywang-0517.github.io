@@ -45,6 +45,7 @@ const Home: NextPage = () => {
                   <span className="flex items-baseline"><h1
                       className="text-white font-title">Tony Wang</h1></span><h2
                         className="bg-clip-text text-white font-title">Senior Front-end Developer</h2>
+                        <p className={'text-lg'}>Bla Bla...</p>
                     </hgroup>
                     <picture className="flex justify-center items-center w-1/2 sm:w-2/5">
                         <Image width="756" height="512"  src="/static/svg-hero-art-538ee183e050d77af16d88c5cec3b80d.svg" className="md:max-h-32 lg:max-h-80" alt="artwork"/></picture>
@@ -61,9 +62,9 @@ const Home: NextPage = () => {
                     <div className="mt-10 lg:container px-3 mx-auto flex justify-center">
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 items-center sm:items-baseline ">
                             {
-                                logos.map(logo=>(
-                                    <a>
-                                        <div className={'w-32 h-32  flex rounded-full bg-stone-900 place-items-center'}>
+                                logos.map((logo,key)=>(
+                                    <a key={key}>
+                                        <div  className={'w-32 h-32  flex rounded-full bg-stone-900 place-items-center'}>
                                             <div className={'w-5/6 h-1/2 relative fill-white m-auto'}>
                                                 <Image  layout='fill' className={'fill-white text-white'}  src={logo} objectFit="contain"/>
                                             </div>
@@ -77,6 +78,7 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                 </section>
+
                 <section className="flex flex-col items-center py-16 bg-stone-100">
                     <div className={'container mx-auto '}>
                         <div className="flex flex-col items-center ">
@@ -85,7 +87,7 @@ const Home: NextPage = () => {
                         </div>
                         {
                             projects.map((project,index)=>(
-                                <div className="flex flex-col py-10 w-full">
+                                <div key={index} className="flex flex-col py-10 w-full">
                                     <div className={`rounded-lg shadow-lg hover:shadow-xl bg-white text-black flex overflow-hidden ${index%2?'lg:flex-row':'lg:flex-row-reverse'}`}>
                                         <div className='basis-3/5'>
                                             <Image src={'/static/svg-hero-art-538ee183e050d77af16d88c5cec3b80d.svg'} width={756} height={512} layout={'responsive'}/>
@@ -108,7 +110,7 @@ const Home: NextPage = () => {
                                             </div>
                                             <div className={'flex justify-between'}>
                                                 <span>Created: Mar 2021</span>
-                                                <a>Visit ></a>
+                                                <a>Visit</a>
                                             </div>
                                         </div>
                                     </div>
@@ -196,13 +198,7 @@ const Home: NextPage = () => {
                                 <p><strong>Email:</strong><span>Anthonywang0517@gmail.com</span></p>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center ">
-                            <p className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">
-                                Summary</p>
-                            <div className={'py-10 mx-auto'}>
-                                <p>Bla Bla...</p>
-                            </div>
-                        </div>
+
                     </div>
 
                 </section>
