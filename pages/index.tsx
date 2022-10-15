@@ -1,6 +1,7 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import {Carousel} from "flowbite-react"
 
 const logos = [
     '/static/freightways.png',
@@ -19,15 +20,23 @@ const logos = [
 
 const projects = [
     {
-        title:'freightways-monorep'
+        title:'freightways-monorep',
+        srcs:['/static/screens/nowc.png','/static/screens/posthast.png','/static/screens/nzc.png','/static/screens/cp.png']
     },{
-        title:'Wallaby travel'
+        title:'Wallaby travel',
+        srcs:['/static/screens/wallabiestravel.png']
     },{
-        title:'whitelabel sthjapan aotravel fiba'
+        title:'whitelabel sthjapan aotravel fiba',
+        srcs:['/static/screens/sth.png','/static/screens/aot.png','/static/screens/fiba.png']
     },{
-        title:'austin  active travel '
+        title:'austin  active travel ',
+        srcs:['/static/screens/activea.png','/static/screens/austina.png']
     },{
-        title:'seekstock'
+        title:'seekstock',
+        srcs:['/static/screens/ss.png']
+    },{
+        title:'alpsmart',
+        srcs:['/static/screens/alpsmart.png']
     }
 ]
 
@@ -87,12 +96,28 @@ const Home: NextPage = () => {
                         </div>
                         {
                             projects.map((project,index)=>(
-                                <div key={index} className="flex flex-col py-10 w-full">
-                                    <div className={`rounded-lg shadow-lg hover:shadow-xl bg-white text-black flex overflow-hidden ${index%2?'lg:flex-row':'lg:flex-row-reverse'}`}>
-                                        <div className='basis-3/5'>
-                                            <Image src={'/static/svg-hero-art-538ee183e050d77af16d88c5cec3b80d.svg'} width={756} height={512} layout={'responsive'}/>
+                                <div key={index} className="flex flex-col py-10 w-full h-2/6" >
+                                    <div className={`rounded-lg shadow-lg hover:shadow-xl bg-white text-black flex flex-col overflow-hidden ${index%2?'lg:flex-row':'lg:flex-row-reverse'}`} >
+                                        <div className='basis-full md:basis-3/5'>
+                                            {
+                                                project.srcs.length !== 1?<Carousel slide={false} >
+                                                    {
+                                                        project.srcs.map(src=>(
+                                                            <div className={'relative overflow-hidden'} style={{height:'735px'}}>
+                                                                <div className={'absolute w-full h-full bg-stone-900 z-10 opacity-20'}></div>
+                                                                <Image src={src}  layout={'fill'}  objectFit={'cover'} objectPosition={'top'}/>
+                                                            </div>
+                                                        ))
+                                                    }
+                                                </Carousel>:<div className={'relative overflow-hidden'} style={{height:'735px'}}>
+                                                    <div className={'absolute w-full h-full bg-stone-900 z-10 opacity-20'}></div>
+                                                    <Image src={project.srcs[0]}  layout={'fill'}  objectFit={'cover'} objectPosition={'top'}/>
+                                                </div>
+                                            }
+
+
                                         </div>
-                                        <div className='basis-2/5 p-8 sm:p-12 flex flex-col text-gray-800'>
+                                        <div className='basis-full md:basis-2/5 p-8 sm:p-12 flex flex-col text-gray-800'>
                                             <h3 className={'font-title tracking-tight text-gray-700 text-xl md:text-2xl font-bold mb-5'}>
                                                 Projects
                                             </h3>
