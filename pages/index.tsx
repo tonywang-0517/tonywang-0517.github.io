@@ -2,49 +2,209 @@ import type {NextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
+const logos = [
+    '/static/freightways.png',
+    '/static/nzc.svg',
+    '/static/posthast.svg',
+    '/static/nowcouries.png',
+    '/static/seekstock.png',
+    '/static/wallabiestravel.svg',
+    '/static/sthj.svg',
+    '/static/aotravel.svg',
+    '/static/fiba.svg',
+    '/static/activeadventures.svg',
+    '/static/austinadventures.svg',
+    '/static/alpsmart.png'
+];
+
+const projects = [
+    {
+        title:'freightways-monorep'
+    },{
+        title:'Wallaby travel'
+    },{
+        title:'whitelabel sthjapan aotravel fiba'
+    },{
+        title:'austin  active travel '
+    },{
+        title:'seekstock'
+    }
+]
+
+
 const Home: NextPage = () => {
+
+
     return (
         <div>
-            <header className="text-gray-100 bg-gradient-to-bl to-black from-gray-800 w-full z-50 py-2">
-                <div className="px-2 md:px-4 lg:px-0 py-2 lg:container mx-auto text-gray-200"><a
-                    href="https://www.linkedin.com/" target="_blank"  rel="noreferrer"
-                    className="flex justify-end items-baseline space-x-2 hover:underline"><span
-                    className="text-sm md:text-base">Get in touch</span><span className="w-4 h-4"><svg aria-hidden="true"
-                                                                                                       focusable="false"
-                                                                                                       data-prefix="fab"
-                                                                                                       data-icon="linkedin"
-                                                                                                       className="svg-inline--fa fa-linkedin fa-w-14 "
-                                                                                                       role="img"
-                                                                                                       xmlns="http://www.w3.org/2000/svg"
-                                                                                                       viewBox="0 0 448 512"><path
-                    fill="currentColor"
-                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></span></a>
-                </div>
+            <header className="text-gray-100 bg-lime-500 w-full z-50 py-2">
+
                 <div className="lg:container w-full  flex flex-col md:flex-row  items-center justify-center md:justify-between  md:px-8 xl:px-0  py-8 md:py-8 lg:py-20 mx-auto">
                     <hgroup
                         className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl p-5 font-bold lg:w-3/5 flex flex-col items-center md:items-start">
-                  <span className="flex items-baseline"><span
-                      className="text-gray-300 font-title">Tony Wang</span><span
-                      className="text-gray-400 ml-2 text-xs md:text-xl lg:text-2xl">MD, BE.</span></span><span
-                        className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 font-title">Senior front-end developer</span>
+                  <span className="flex items-baseline"><h1
+                      className="text-white font-title">Tony Wang</h1></span><h2
+                        className="bg-clip-text text-white font-title">Senior Front-end Developer</h2>
                     </hgroup>
                     <picture className="flex justify-center items-center w-1/2 sm:w-2/5">
                         <Image width="756" height="512"  src="/static/svg-hero-art-538ee183e050d77af16d88c5cec3b80d.svg" className="md:max-h-32 lg:max-h-80" alt="artwork"/></picture>
                 </div>
             </header>
             <main>
-                <section className="flex flex-col items-center py-16 ">
-                    <header className="flex flex-col items-center"><h1
-                        className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">Contract
-                        Software Development</h1>
-                        <hgroup className="text-gray-700 text-lg text-center">For some of the biggest brands in New
-                            Zealand and the world
+                <section className="flex flex-col items-center py-16 bg-amber-300">
+                    <header className="flex flex-col items-center"><p
+                        className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">portfolio I delivered to clients</p>
+                        <hgroup className="text-gray-700 text-lg text-center">
+                            portfolio I delivered to clients
                         </hgroup>
                     </header>
                     <div className="mt-10 lg:container px-3 mx-auto flex justify-center">
-                        <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8 md:space-x-16 items-center sm:items-baseline">
-                            </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 items-center sm:items-baseline ">
+                            {
+                                logos.map(logo=>(
+                                    <a>
+                                        <div className={'w-32 h-32  flex rounded-full bg-stone-900 place-items-center'}>
+                                            <div className={'w-5/6 h-1/2 relative fill-white m-auto'}>
+                                                <Image  layout='fill' className={'fill-white text-white'}  src={logo} objectFit="contain"/>
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                ))
+                            }
+
+                        </div>
                     </div>
+                </section>
+                <section className="flex flex-col items-center py-16 bg-stone-100">
+                    <div className={'container mx-auto '}>
+                        <div className="flex flex-col items-center ">
+                            <p className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">
+                                Commercial Projects</p>
+                        </div>
+                        {
+                            projects.map((project,index)=>(
+                                <div className="flex flex-col py-10 w-full">
+                                    <div className={`rounded-lg shadow-lg hover:shadow-xl bg-white text-black flex overflow-hidden ${index%2?'lg:flex-row':'lg:flex-row-reverse'}`}>
+                                        <div className='basis-3/5'>
+                                            <Image src={'/static/svg-hero-art-538ee183e050d77af16d88c5cec3b80d.svg'} width={756} height={512} layout={'responsive'}/>
+                                        </div>
+                                        <div className='basis-2/5 p-8 sm:p-12 flex flex-col text-gray-800'>
+                                            <h3 className={'font-title tracking-tight text-gray-700 text-xl md:text-2xl font-bold mb-5'}>
+                                                Projects
+                                            </h3>
+                                            <div className={'text-base space-y-3'}>
+                                                <p>{project?.title}</p>
+                                            </div>
+                                            <div className={'py-10'}>
+                                                <p>
+                                                    TECHNOLOGIES
+                                                </p>
+                                                <p>
+                                                    GatsbyJS (ReactJS) · TypeScript · TailwindCSS · Shopify integration · GraphQL
+                                                </p>
+
+                                            </div>
+                                            <div className={'flex justify-between'}>
+                                                <span>Created: Mar 2021</span>
+                                                <a>Visit ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                        <div className="flex flex-col items-center ">
+                            <p className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">
+                                Technologies & Skills</p>
+                        </div>
+                        <div className={'grid grid-cols-1 md:grid-cols-2 gap-5 w-full my-10'}>
+                            <div className={'rounded-lg shadow-lg hover:shadow-xl bg-white text-black p-8'}>
+                                <p className={'uppercase mb-5 font-bold tracking-widest'}>Front-end</p>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                            </div>
+                            <div className={'rounded-lg shadow-lg hover:shadow-xl bg-white text-black p-8'}>
+                                <p className={'uppercase mb-5 font-bold tracking-widest'}>Front-end</p>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                            </div>
+                            <div className={'rounded-lg shadow-lg hover:shadow-xl bg-white text-black p-8'}>
+                                <p className={'uppercase mb-5 font-bold tracking-widest'}>Front-end</p>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                            </div>
+                            <div className={'rounded-lg shadow-lg hover:shadow-xl bg-white text-black p-8'}>
+                                <p className={'uppercase mb-5 font-bold tracking-widest'}>Front-end</p>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                                <div className={'flex flex-row'}>
+                                    <p className={'basis-16'}>icon</p><p className={'basis-auto'}>React</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center ">
+                            <p className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">
+                                Recommendations</p>
+                        </div>
+                        <div className={'mx-auto my-10 w-7/12'}>
+                            <Image src={'/static/refer.png'} width={1986} height={2810} layout={'responsive'} objectFit={'contain'}/>
+                        </div>
+                        <div className="flex flex-col items-center ">
+                            <p className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">
+                                Education and training</p>
+                        </div>
+                        <div className={'mx-auto my-10 w-7/12 text-center'}>
+                            <p>Bachelor of Science, Software engineering, 07/2015</p>
+                            <div className={'bg-red-700 w-5/12 p-5 mx-auto'}>
+                                <Image src={'/static/university.png'} width={275} height={71} layout={'responsive'}/>
+                            </div>
+                            <p>Sichuan University - Sichuan</p>
+                        </div>
+                        <div className="flex flex-col items-center ">
+                            <p className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">
+                                Contact</p>
+                            <div className={'py-10 mx-auto'}>
+                                <p><strong>Address:</strong><span>Auckland Centre</span></p>
+                                <p><strong>Phone:</strong><span>021 088 24591</span></p>
+                                <p><strong>Email:</strong><span>Anthonywang0517@gmail.com</span></p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center ">
+                            <p className="font-title text-2xl sm:text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 text-center">
+                                Summary</p>
+                            <div className={'py-10 mx-auto'}>
+                                <p>Bla Bla...</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
             </main>
         </div>
