@@ -2,6 +2,9 @@ import React from 'react'
 import Image from "next/image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope, faLocationDot, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {
+    faLinkedinIn
+} from "@fortawesome/free-brands-svg-icons";
 
 interface Props {
     showNav: Boolean
@@ -10,11 +13,11 @@ const NavBar = ({showNav}: Props) => (
     <>
         <nav
             className={`${(!showNav) ? 'hidden' : ''} bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600`}>
-            <div className="container flex flex-wrap justify-between items-center mx-auto">
-                <span className="self-center text-xl font-semibold whitespace-nowrap text-slate-900 ">Tony Wang</span>
-                <div className="hidden justify-center items-center w-full md:flex md:w-auto md:order-1"
-                     id="navbar-sticky">
-                </div>
+            <div className="px-2 container flex flex-wrap justify-between items-center mx-auto">
+                <div className="flex"> <Image width="32" height="32" src="/static/portrait.png"
+                                                                                                 alt="Tony Wang"/><span className={'ml-2 text-xl font-semibold whitespace-nowrap text-slate-900 '}>Tony Wang</span></div>
+
+                <span className="text-xl font-semibold whitespace-nowrap text-slate-900 "><FontAwesomeIcon icon={faLinkedinIn}/></span>
             </div>
         </nav>
         <header className="text-gray-100 bg-gradient-to-b from-slate-900 to-slate-600 w-full z-50 py-2">

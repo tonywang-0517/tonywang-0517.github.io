@@ -28,7 +28,6 @@ const Home: NextPage = () => {
 
     return (
         <div>
-
             <NavBar showNav={showNav}/>
             <main>
                 <section className="flex flex-col items-center py-16 bg-blue-200">
@@ -99,8 +98,6 @@ const Home: NextPage = () => {
                                             <h3 className={'font-title tracking-tight text-gray-700 text-xl md:text-2xl font-bold mb-5 uppercase'}>
                                                 {project?.title}
                                             </h3>
-
-
                                             <div className={'text-base space-y-3'}>
                                                 {project?.descriptions.map((des,index) => <p key={index}>{des}</p>)}
                                             </div>
