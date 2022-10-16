@@ -17,7 +17,7 @@ const NavBar = ({showNav}: Props) => (
                 <div className="flex"> <Image width="32" height="32" src="/static/portrait.png"
                                                                                                  alt="Tony Wang"/><span className={'ml-2 text-xl font-semibold whitespace-nowrap text-slate-900 '}>Tony Wang</span></div>
 
-                <span className="text-xl font-semibold whitespace-nowrap text-slate-900 "><FontAwesomeIcon icon={faLinkedinIn}/></span>
+                <a href={'https://www.linkedin.com/in/tony-wang-4a6b5b124/'} className="hover:opacity-70  text-xl font-semibold whitespace-nowrap text-slate-900 "><FontAwesomeIcon icon={faLinkedinIn}/></a>
             </div>
         </nav>
         <header className="text-gray-100 bg-gradient-to-b from-slate-900 to-slate-600 w-full z-50 py-2">

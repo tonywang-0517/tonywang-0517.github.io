@@ -125,10 +125,10 @@ const Home: NextPage = () => {
                                             </div>
                                             <div className={`w-full text-right`}>
                                                 {
-                                                    project.hrefs.length <= 1?<a className={`font-bold ${project.hrefs.length===0?'cursor-not-allowed text-gray-300':'cursor-pointer hover:underline hover:opacity-80'}`} href={project.hrefs[0]} target="_blank" rel="noreferrer">Visit <FontAwesomeIcon icon={faArrowRight}/></a>:
+                                                    project.hrefs.length <= 1?<a className={`font-bold ${project.hrefs.length===0?'cursor-not-allowed text-gray-300':'cursor-pointer hover:underline hover:opacity-70'}`} href={project.hrefs[0]} target="_blank" rel="noreferrer">Visit <FontAwesomeIcon icon={faArrowRight}/></a>:
                                                         <div className={'grid text-center grid-cols-2 sm:flex  justify-between'}>
                                                             {
-                                                                project.hrefs.map((href,index)=><a key={index} className={`mb-2 sm:mb-0 font-bold ${project.hrefs.length===0?'cursor-not-allowed text-gray-300':'cursor-pointer hover:underline hover:opacity-80'}`} href={href} target="_blank" rel="noreferrer">{project.brands.split( ' · ')[index]} <FontAwesomeIcon icon={faArrowRight}/></a>)
+                                                                project.hrefs.map((href,index)=><a key={index} className={`mb-2 sm:mb-0 font-bold ${project.hrefs.length===0?'cursor-not-allowed text-gray-300':'cursor-pointer hover:underline hover:opacity-70'}`} href={href} target="_blank" rel="noreferrer">{project.brands.split( ' · ')[index]} <FontAwesomeIcon icon={faArrowRight}/></a>)
                                                             }
                                                         </div>
                                                 }

@@ -50,7 +50,7 @@ const projects = [
         hrefs:['https://wallabiestravel.com.au/']
     }, {
         title: 'travel booking Portal (white-label)',
-        brands: 'STH Japan · Australia Open Travel · FIBA Travel',
+        brands: 'STH Japan · AO Travel · FIBA Travel',
         descriptions: ['Sports Travel & Hospitality Japan (STH Japan) is the leading provider of sports hospitality and premium spectator experiences in Japan. And AO Travel was established in 2021 as a partnership between Tennis Australia and STH Australia, and is the official global provider for Australian Open travel and premium experiences. I delivered the project  on time and the sales of AO Travel packages launched in Japan on 22 June, 2022 and is available for purchase via AO Travel’s dedicated Japan ecommerce site',
             'As the main frontend developer, I create a white-label booking platform from green project for their brands to sale, the project is a little bit similar with Wallabies Travel but have a new feature for dynamic theme with different colors and typography.'],
         srcs: ['/static/screens/sth.png', '/static/screens/aot.png', '/static/screens/fiba.png'],
