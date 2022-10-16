@@ -6,6 +6,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.carousel {
+  .rounded-lg {
+    border-radius:0
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
