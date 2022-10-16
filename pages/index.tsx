@@ -95,8 +95,7 @@ const Home: NextPage = () => {
                                         <div
                                             className='basis-full md:basis-2/5 p-8 sm:p-12 flex flex-col text-gray-800'>
                                             <label
-                                                className={'text-gray-400 tracking-widest font-bold text-xs uppercase mb-2'}>Created:
-                                                Mar 2021</label>
+                                                className={'text-gray-400 tracking-widest font-bold text-xs uppercase mb-2'}>{project.created}</label>
                                             <h3 className={'font-title tracking-tight text-gray-700 text-xl md:text-2xl font-bold mb-5 uppercase'}>
                                                 {project?.title}
                                             </h3>
