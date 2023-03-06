@@ -51,10 +51,10 @@ const NavBar = ({showNav}: Props) => (
                         className={'hover:underline hover:opacity-80'}><a
                         target="_blank" rel="noreferrer"
                         href={'https://goo.gl/maps/tp8bZKeCeoq7duip6'}>Auckland, New Zealand</a></span></p>
-                    <p className={'hidden'}><span className={'inline-block w-8'}><FontAwesomeIcon icon={faEnvelope}/></span><span
+                    <p><span className={'inline-block w-8'}><FontAwesomeIcon icon={faEnvelope}/></span><span
                         className={'hover:underline hover:opacity-80'}><a
                         href="mailto:anthonywang0517@gmail.co">anthonywang0517@gmail.com</a></span></p>
-                    <p className={'hidden'}><span className={'inline-block w-8'}><FontAwesomeIcon icon={faPhone}/></span><span
+                    <p><span className={'inline-block w-8'}><FontAwesomeIcon icon={faPhone}/></span><span
                         className={'hover:underline hover:opacity-80'}><a
                         href="tel:006402108824591">+64 021 088 24591</a></span></p>
                 </div>
