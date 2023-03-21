@@ -37,8 +37,8 @@ const NavBar = ({showNav}: Props) => (
                             accomplishing challenging development goals under strict deadlines. Analytical and
                             resourceful problem-solver with disciplined approach and skill in producing clean, robust
                             code.</p>
-                        <p className={'mt-5 lg:mt-10 text-base  lg:text-lg xl:text-lg font-light'}>- I&apos;m looking
-                            for a full-time role as Front-end Developer at Auckland.</p>
+                        {/*<p className={'mt-5 lg:mt-10 text-base  lg:text-lg xl:text-lg font-light'}>- I&apos;m looking
+                            for a full-time role as Front-end Developer at Auckland.</p>*/}
                     </div>
                     <div className="flex justify-end xl:justify-center items-center w-1/2 sm:w-2/5">
                         <Image width="256" height="256" src="/static/portrait.png"
